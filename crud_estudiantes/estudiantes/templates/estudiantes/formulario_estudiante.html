@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario Estudiante</title>
+</head>
+<body>
+    <h1>Formulario de Estudiante</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <a href="{% url 'lista_estudiantes' %}">Volver a la lista</a>
+</body>
+</html>

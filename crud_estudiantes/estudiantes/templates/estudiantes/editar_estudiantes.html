@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Estudiante</title>
+</head>
+<body>
+    <h1>Editar Estudiante</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" value="{{ estudiante.nombre }}"><br>
+        <label>Edad:</label><br>
+        <input type="number" name="edad" value="{{ estudiante.edad }}"><br>
+        <label>Carrera:</label><br>
+        <input type="text" name="carrera" value="{{ estudiante.carrera }}"><br><br>
+        <button type="submit">Actualizar</button>
+    </form>
+    <a href="{% url 'lista_estudiantes' %}">Volver</a>
+</body>
+</html>
